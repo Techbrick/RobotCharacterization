@@ -14,9 +14,9 @@
     "rightControllerTypes": ['WPI_TalonSRX','WPI_VictorSPX'],
     # Set motors to inverted or not
     # If doing drive test, treat this as the left side of the drivetrain
-    "motorsInverted": [False,False],
+    "motorsInverted": [True,True],
     # Only if you are doing drive (leave empty "[]" if not)
-    "rightMotorsInverted": [False,False],
+    "rightMotorsInverted": [True,True],
     # Encoder edges-per-revolution (*NOT* cycles per revolution!)
     # For the CTRE Mag Encoder, use 4096 (4 * 1024 = 4096)
     "encoderEPR": 4096,
