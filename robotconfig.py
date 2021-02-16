@@ -26,7 +26,7 @@
 # than the 2nd stage output shaft.
 
     # Gearing accounts for the gearing between the encoder and the output shaft
-    "gearing": 1.66666,
+    "gearing": .6,
     # Encoder ports (leave empty "[]" if not needed)
     # Specifying encoder ports indicates you want to use Rio-side encoders
     # If doing drive test, treat this as the left side of the drivetrain

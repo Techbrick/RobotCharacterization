@@ -58,7 +58,7 @@ public class Robot extends TimedRobot {
   static private double ENCODER_EDGES_PER_REV = 4096 / 4.;
   static private int PIDIDX = 0;
   static private int ENCODER_EPR = 4096;
-  static private double GEARING = 1.66666;
+  static private double GEARING = 0.6;
   
   private double encoderConstant = (1 / GEARING) * (1 / ENCODER_EDGES_PER_REV);
 
@@ -220,13 +220,13 @@ public class Robot extends TimedRobot {
     stick = new Joystick(0);
     
     // create left motor
-    WPI_TalonSRX leftMotor = setupWPI_TalonSRX(1, Sides.LEFT, false);
+    WPI_TalonSRX leftMotor = setupWPI_TalonSRX(1, Sides.LEFT, true);
 
-    WPI_VictorSPX leftFollowerID2 = setupWPI_VictorSPX(2, Sides.FOLLOWER, false);
+    WPI_VictorSPX leftFollowerID2 = setupWPI_VictorSPX(2, Sides.FOLLOWER, true);
     leftFollowerID2.follow(leftMotor);
 
-    WPI_TalonSRX rightMotor = setupWPI_TalonSRX(6, Sides.RIGHT, false);
-    WPI_VictorSPX rightFollowerID7 = setupWPI_VictorSPX(7, Sides.FOLLOWER, false);    
+    WPI_TalonSRX rightMotor = setupWPI_TalonSRX(6, Sides.RIGHT, true);
+    WPI_VictorSPX rightFollowerID7 = setupWPI_VictorSPX(7, Sides.FOLLOWER, true);    
     rightFollowerID7.follow(rightMotor);
     drive = new DifferentialDrive(leftMotor, rightMotor);
     drive.setDeadband(0);
