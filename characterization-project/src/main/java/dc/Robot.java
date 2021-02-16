@@ -60,7 +60,8 @@ public class Robot extends TimedRobot {
   static private int ENCODER_EPR = 4096;
   static private double GEARING = 0.6;
   
-  private double encoderConstant = (1 / GEARING) * (1 / ENCODER_EDGES_PER_REV);
+  // private double encoderConstant = 0.000022224; // this is the real number as calculated through pheonix tuner and excel
+  private double encoderConstant = 0.00005; // this is the number we are fudging.
 
   Joystick stick;
   DifferentialDrive drive;
